@@ -40,6 +40,7 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
+    "eslint": "^8.41.0",
     "mocha": "^10.1.0",
     "mock-require": "^3.0.3",
     "qs": "^6.10.3",
@@ -60,7 +61,10 @@
     "test:single": "mocha -timeout 180000 --full-trace",
     "test:system": "mocha -timeout 180000 --recursive --full-trace system_test/*.js",
     "test:unit": "mocha -timeout 180000 --recursive --full-trace test/unit/**/*.js test/unit/*.js",
-    "test:ci": "mocha -timeout 180000 --recursive --full-trace test/**/*.js system_test/*.js"
+    "test:ci": "mocha -timeout 180000 --recursive --full-trace test/**/*.js system_test/*.js",
+    "lint:check" : "eslint",
+    "lint:check:all" : "eslint lib system_test test",
+    "lint:fix" : "eslint --fix"
   },
   "author": {
     "name": "Snowflake Computing, Inc.",
