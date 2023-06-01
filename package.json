@@ -62,7 +62,7 @@
     "test:system": "nyc --no-clean mocha -timeout 180000 --recursive --full-trace system_test/*.js",
     "test:unit": "nyc --no-clean mocha -timeout 180000 --recursive --full-trace test/unit/**/*.js test/unit/util_test.js",
     "test:ci": "nyc --no-clean mocha -timeout 180000 --recursive --full-trace test/**/*.js system_test/*.js",
-    "test:coverage": "nyc report --reporter=json --reporter=text"
+    "test:coverage": "nyc report --reporter=html --reporter=text"
   },
   "author": {
     "name": "Snowflake Computing, Inc.",

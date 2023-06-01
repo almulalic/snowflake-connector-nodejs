@@ -126,6 +126,15 @@ jobs:
               run: ./ci/test.sh
             - name: Generate NYC report
               run:  npm test:coverage
+            - name: HTML Preview
+              id: html_preview
+              uses: pavi2410/html-preview-action@v2
+              with:
+                html_file: coverage/index.json"
+#            - name: Report NYC coverage
+#              uses: sidx1024/report-nyc-coverage-github-action@v1.2.7
+#              with:
+#                coverage_file: "coverage/coverage-final.json"
 
     test-mac-optional:
         needs: test-linux-required
