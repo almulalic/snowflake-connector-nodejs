@@ -124,8 +124,6 @@ jobs:
                 CLOUD_PROVIDER: ${{ matrix.cloud }}
                 TARGET_DOCKER_TEST_IMAGE: ${{ matrix.image }}
               run: ./ci/test.sh
-            - name: Generate NYC report
-              run:  npm test:coverage
             - name: HTML Preview
               id: html_preview
               uses: pavi2410/html-preview-action@v2
